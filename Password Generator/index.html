@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Below two line helps to fetch fonts faster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400&display=swap" rel="stylesheet">  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+    <h1>Password Generator</h1>
+
+    <div class="display-container">
+        <!-- using readonly in below code snippet allow us to not modify the password. -->
+        <input readonly placeholder="Password" class="display" data-passwordDisplay> <!-- we could also select element by custum attribute by queryselector-->
+        <button data-copy>
+            <span data-copyMsg></span>
+            <img src="./Assets/copy.svg" alt="Copy" height="23" width="23">
+        </button>
+    </div>
+
+    
+
+    <div class="input-container">
+        <!-- Password Length Section -->
+        <div class="length-container">
+            <p>Password Length</p>
+            <p data-lengthNumber>0</p>
+        </div>
+        <!-- Slider code using range -->
+        <input type="range" min="0" max="20" step="1" class="slider"  data-lengthSlider>
+
+        <!-- CheckBoxes -->
+        <div>
+            <input type="checkbox" id="uppercase">
+            <label for="uppercase">Includes Uppercase Letters</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lowercase">
+            <label for="lowercase">Includes Lowercase Letters</label>
+        </div>
+        <div>
+            <input type="checkbox" id="numbers">
+            <label for="numbers">Includes Number</label>
+        </div>
+        <div>
+            <input type="checkbox" id="symbols">
+            <label for="symbol">Includes Symbol </label>
+        </div>
+
+        <!-- strength section -->
+        <div class="strength-container">
+            <p>Strength</p>
+            <div data-indicator></div>
+        </div>
+
+        <!-- generate password -->
+        <button class="generateButton">Generate Password</button>
+    </div>
+
+</div>
+<script src="script.js"></script> 
+</body>
+</html>

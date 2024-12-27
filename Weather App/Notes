@@ -1,0 +1,32 @@
+
+
+API - server and clients ke beech communication krwata hi 
+link :- https://codehelp-weather-app.netlify.app/
+
+
+data humara server pr store hi.
+
+Objective:- ki api kaise integrate krte hi.
+
+we will use openWeather api
+
+api ke saath api key bheji jaatihi.
+API key se humari request server pr authorize hogi , aisa nhi hi ki server kisi bhi request ko data dene lag jayega.
+
+open weather api website  --> https://openweathermap.org/current 
+
+    apiLink ==> https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+    3 parameter needed to pass , lat , lon , api key
+    api key kaha milegi 
+
+api call means network call, 
+isko  humhe asyncrnously use krna chahiye. kyuki pta nhi kitni der me response aayega.
+
+sometime agar data humhe para ki form me dikh rha hi, to use json formatter online se use script type me convert kr sakte hi.
+
+
+// displaying in UI , some calculation of JS , by  creating a new Element or storing ans in some old div.
+    let newPara = document.createElement('p');
+    newPara.textContent = `${data?.main?.temp.toFixed(2)} ℃`
+    document.body.appendChild(newPara);

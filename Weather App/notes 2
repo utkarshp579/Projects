@@ -1,0 +1,14 @@
+4 screen -->
+grant access
+user location
+search location
+user loading.
+
+
+// In html agar mujhe koi container ki body bna rha hun , to use tag-container naam doongs  , agar input container hi to input-container.
+while using image tag , ek best practice apnao aur loading attribute ko lazy pr set kr do.
+
+
+After completing Html, we have to do 
+
+we are going to build tab switch. 
