@@ -1,0 +1,101 @@
+* {
+  /* border box , se border fix rhta hi border inside the box form hota hi */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* in wrapper we want ki saara ka saara code iske ander aana  chahiye */
+  #wrapper {
+    height: 100vh;
+    overflow-x: hidden; /*Not want to scroll left and right*/
+    overflow-y: auto;/* auto for scrolling top and bottom */
+    perspective: 10px;/*browser window and anko ke beech ka distance , or we can say z akis ka ankho se distance , we assume ki pehle z-axis se ye distance 0 tha to humhe z-axis dikh hi nhi rhi ti.*/
+  }
+  .container {
+    position: relative; /*for overlapping we need absolute , for it nearest non static container , therefore we are giving it absolute*/
+    display: flex;
+    justify-content: center; /*adventure ko center me laane ke liye*/
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+  }
+
+  .background {
+    /* border: 5px solid black; */
+    transform: translateZ(-40px) scale(5);/*door bhej diya hi , -ve use krke , ab use bada kr dete hi.*/
+  }
+
+  .foreground {
+    height: 100px;
+    transform: translateZ(-20px) scale(3); 
+  }
+
+  .foreground,
+  .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;/*value ko upar neeche krwana as per their order*/
+    object-fit: cover;/*fit width */
+  }
+
+  /* as humne background and forground ka z-index minus kr diya to already humare Adventure text ka bhi bhi wo plus me hi */
+h1{
+  position:absolute;
+  top: 5rem; 
+  color:  white;
+  letter-spacing: 4px;
+  font-size: 10rem;
+  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+section{
+  background-color: rgb(45, 45, 45);
+  color: white;
+  padding: 5rem 0;
+}
+
+.secHeading{
+  font-size: 5rem;
+  padding: 0 10rem;
+}
+
+.text{
+  font-size: 1.5rem;
+  padding: 0 10rem;
+  margin: 5rem 0;
+}
+
+.bg{
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;/*background image ko fixed krna aur hum uske upar scroll bhi kr sakte hi*/
+  background-size: cover;/*background image ko screen pr fit krna */
+  background-position: center; /*background imagee ko center krna */
+  height: 500px;
+}
+
+.desc{
+  position: absolute;/*overlapping*/
+  padding: 0.5rem 2.5rem;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateX(-50%);
+  color: black;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.bg1{
+  background-image: url('../Images/sport-1.png');
+}
+.bg2{
+  background-image: url('../Images/sport-2.png');
+}
+.bg3{
+  background-image: url('../Images/sport-3.png');
+}

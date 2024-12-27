@@ -1,0 +1,27 @@
+assume ki aap train se jaa rhe ho , dur ek mountain hi ,
+aur pass me uncle ji hi , to ab btao jab humari train move kregi to kya hoga, 
+uncle pass me hi to wo humhe jaldi move krte hue dikhenge , aur mountain slow move krte hue dikhega.
+
+CSS concept used:- scale , transform , 3d , perspective , slide
+
+
+
+overright krwane ke liye relative but uske liye humhe kuch absolute krna padega
+
+
+m-0 --> is shorthand of margin 0
+p-0 --> is shorthand of padding 0
+
+<div class="bg bg1"></div>
+    class ke naam me gap nhi hota hi
+    yaha pr hum isme 2 class ki properties daal rhe hi.
+
+
+css ki help se picture lagana , without using iimg tag
+    background-image: url();
+
+
+img and background-image difference;
+
+
+background-attachment: ye ek property hi , jisse background humara fix rhega , aur baaki saari cheeze uspr scroll krti rhengi.    
