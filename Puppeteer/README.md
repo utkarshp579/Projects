@@ -27,6 +27,7 @@ A simple Node.js web scraper built with [Puppeteer](https://pptr.dev/) that extr
    node scraper.js
 
 ## Project Structure
+```
 ├── scraper.js     # Puppeteer script
 ├── package.json   # Node.js dependencies
 ├── .gitignore     # Ignored files
