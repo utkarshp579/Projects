@@ -1,8 +1,3 @@
-#  Alternatively: Use the Visual Studio Developer Command Prompt
-# incomplete or incorrect installation of the Visual Studio Build Tools.
-
-
-
 import face_recognition
 import cv2
 import numpy as np
